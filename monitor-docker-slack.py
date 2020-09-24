@@ -126,7 +126,7 @@ if __name__ == '__main__':
         print("%s: %s" % (status, err_msg))
         if status == "OK":
             if has_send_error_alert is True:
-                requests.post(slack_webhook, data=json.dumps({'text': err_msg}))
+                #requests.post(slack_webhook, data=json.dumps({'text': err_msg}))
                 has_send_error_alert = False
         else:
             if has_send_error_alert is False:
